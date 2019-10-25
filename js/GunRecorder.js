@@ -24,6 +24,7 @@ class GunRecorder {
   }
 
   record() {
+    var gunRecorder = this;
     if (this.recordSate == recordSate.RECORDING) {
       this.mediaRecorder.stop();
       clearInterval(this.experimentalTimerId);
@@ -45,6 +46,7 @@ class GunRecorder {
 
   //This will use a custom timer to make intervals witb start and stop recorder decrease latency test
   experimentalTimer() {
+    var gunRecorder = this;
     if (gunRecorder.experimental) {
       // mediaRecorder.requestData() can we parse this manually?
       gunRecorder.mediaRecorder.stop()
