@@ -82,8 +82,8 @@ class GunStreamer {
     }
     if (this.gunDB !== null && this.gunDB !== undefined) {
       //Probably has to be changed to different data structure
-      user = gunDB.get(this.streamId).put({ initial: initialData, data: base64data, id: this.streamId, timestamp: lastUpdate, isSpeaking: false });
-      gunDB.get(this.dbRecord).set(user);
+      user = this.gunDB.get(this.streamId).put({ initial: initialData, data: base64data, id: this.streamId, timestamp: lastUpdate, isSpeaking: false });
+      this.gunDB.get(this.dbRecord).set(user);
     } else if (this.onStreamerData !== null && this.onStreamerData !== undefined) {
       this.onStreamerData({ initial: initialData, data: base64data, id: this.streamId, timestamp: lastUpdate, isSpeaking: false });
     }
