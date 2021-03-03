@@ -38,7 +38,7 @@ Just make sure to refer it at the end of the body as a script.
 
 ```javascript
 //Basic configurations for mime types
-onst MIMETYPE_VIDEO_AUDIO = 'video/webm; codecs="opus,vp8"';
+const MIMETYPE_VIDEO_AUDIO = 'video/webm; codecs="opus,vp8"';
 const MIMETYPE_VIDEO_ONLY = 'video/webm; codecs="vp8"';
 
 //Configure GunViewer 
